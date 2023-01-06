@@ -4,5 +4,4 @@ def add(a, b):
     b = 2
     total = add = a + b
     print("{0} + {1} = {2}".format(a, b, total))
-
-add(1, 2)
+    add(1, 2)
