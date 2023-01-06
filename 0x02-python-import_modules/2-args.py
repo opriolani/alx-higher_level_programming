@@ -3,6 +3,7 @@ import sys
 
 # Get the list of arguments
 args = sys.argv[1:]
+
 # Print the number of arguments and the list of arguments
 if len(args) == 0:
     print("No arguments.")
