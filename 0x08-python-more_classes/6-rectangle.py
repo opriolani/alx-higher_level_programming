@@ -14,6 +14,12 @@ class Rectangle:
 
     """Representation of a rectangle"""
 
+
+
+    number_of_instances = 0
+
+
+
     def __init__(self, width=0, height=0):
 
         """Initializes the rectangle"""
@@ -21,6 +27,18 @@ class Rectangle:
         self.width = width
 
         self.height = height
+
+        Rectangle.number_of_instances += 1
+
+
+
+    def __del__(self):
+
+        """prints a string when an instance has been deleted"""
+
+        print("Bye rectangle...")
+
+        Rectangle.number_of_instances -= 1
 
 
 
@@ -97,3 +115,27 @@ class Rectangle:
             return 0
 
         return (self.__width * 2) + (self.__height * 2)
+
+
+
+    def __str__(self):
+
+        """returns printable string representation of the rectangle"""
+
+        string = ""
+
+        if self.__width != 0 and self.__height != 0:
+
+            string += "\n".join("#" * self.__width
+
+                                for j in range(self.__height))
+
+        return string
+
+
+
+    def __repr__(self):
+
+        """returns a string representation of the rectangle for reproduction"""
+
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
