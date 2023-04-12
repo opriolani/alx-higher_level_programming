@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // This print x times C is fun
-const y = Math.floor(Number(process.argv[2]));
+const x = Math.floor(Number(process.argv[2]));
 if (isNaN(x)) {
   console.log('Missing number of occurrences');
 } else {
